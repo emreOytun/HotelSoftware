@@ -5,9 +5,6 @@
 #define ROOM_NUM 100
 const char *PRICE_FORMAT_OUT = "CURRENT PRICE : %lf";
 const char *PRICE_FORMAT_IN = "CURRENT PRICE : %lf";
-// degisken adlarini duzenle.
-// scanf islemlerini kontorllu hale getir.
-// dosya acma kapama islemlerini kontrollu hale getir.
 typedef struct{
 	char fname[20];
 	char lname[20];
@@ -128,7 +125,6 @@ void checkIn(){
 	}
 	else{
 		room.roomNum = roomNum;
-//		fseek(file,-1,SEEK_CUR); //************ Herhangi bir okuma yapmadikca cursor hareket etmez, fread son karaktere kadar okur daha sonrasini okuyamaz orda bekler, yani EOF karakterine getirmez cursor'i.
 	}
 	printf("Please enter customer name and surname : ");	
 	scanf("%s %s",&room.customer.fname,&room.customer.lname);	
