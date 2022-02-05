@@ -15,4 +15,5 @@ If you want to execute program in Linux, you should change system(“cls”) to 
 # If I had more time I would change this
 
 · Different types of rooms with different prices
+
 · Developing menu designs more
