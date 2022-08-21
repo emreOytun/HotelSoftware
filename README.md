@@ -1,8 +1,8 @@
 # Hotel-Software
 
-Before executing the program, MAKE SURE THAT "HotelRooms.txt" and "CurrentPrice.txt" ARE IN THE SAME FILE AS THE PROGRAM.
+Before executing the program, MAKE SURE THAT "HotelRooms.bin" and "CurrentPrice.txt" ARE IN THE SAME FILE AS THE PROGRAM.
 
-Room logs are kept in file "HotelRooms.txt" in binary form, so they can be read and changed by using program.
+Room logs are kept in file "HotelRooms.bin" in binary form, so they can be read and changed by using program.
 
 Current price is kept in file "CurrentPrice.txt". 
 
