@@ -98,7 +98,7 @@ void checkIn(){
 	printf("Please enter room number: ");
 	scanf("%d",&roomNum);
 	
-	FILE *file = fopen("HotelRooms.txt","rb+");
+	FILE *file = fopen("HotelRooms.bin","ab+");
 	if(file==NULL){
 		printf("Sorry...There is a problem with opening database file.\n");
 		printf("Going back to main menu...\n");
@@ -177,7 +177,7 @@ void listBookedRooms(){
 	system("cls");
 	char ch;
 	roomInfo room;
-	FILE *file = fopen("HotelRooms.txt","r");
+	FILE *file = fopen("HotelRooms.bin","rb");
 	if(file==NULL){
 		printf("Sorry...There is a problem with opening database file. Please try again later.\n");
 		printf("\nPress any key to go back to menu...\n");
@@ -209,7 +209,7 @@ void checkOut(){
 	printf("\tCHECK-OUT : \n");
 	printf("*****************************\n");
 	char ch;
-	FILE *file = fopen("HotelRooms.txt","rb+");
+	FILE *file = fopen("HotelRooms.bin","rb+");
 	if(file==NULL){
 		printf("Sorry...There is a problem with opening hotel database. Please try again later.\n");
 		printf("\nPress any key to go back to menu...\n");
@@ -268,7 +268,7 @@ void checkRoomCus(){
 	scanf("%d",&roomNum);
 	}while(!(1<=roomNum && roomNum<=ROOM_NUM));
 	
-	FILE *file = fopen("HotelRooms.txt","r");
+	FILE *file = fopen("HotelRooms.bin","rb");
 	while(fread(&room,sizeof(roomInfo),1,file)){
 		if(roomNum == room.roomNum){
 			isFound = 1;
@@ -308,7 +308,7 @@ void roomInformation(){
 		scanf("%d",&roomNum);
 	}while(!(1<=roomNum && roomNum<=ROOM_NUM));
 	
-	FILE *file = fopen("HotelRooms.txt","rb+");
+	FILE *file = fopen("HotelRooms.bin","rb+");
 	while(fread(&room,sizeof(roomInfo),1,file)){
 		if(room.roomNum == roomNum && room.roomState == 1){
 			isFound = 1;
